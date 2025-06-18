@@ -1,256 +1,157 @@
 <!DOCTYPE html>
-<html lang=zh>
+<html lang="en">
 <head>
-    <!-- so meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="HandheldFriendly" content="True">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="&amp;nbsp;Welcome to ZhangLab! We are at School of Chemistry and Biological Engineering, University of Science and Technology Beijing (USTB) , China🇨🇳. ZhangLab is the laboratory of Computational Molecu">
-<meta property="og:type" content="website">
-<meta property="og:title" content="ZhangLab@USTB 北京科技大学张海洋实验室">
-<meta property="og:url" content="https://zhanglabustb.github.io/index.html">
-<meta property="og:site_name" content="ZhangLab@USTB 北京科技大学张海洋实验室">
-<meta property="og:description" content="&amp;nbsp;Welcome to ZhangLab! We are at School of Chemistry and Biological Engineering, University of Science and Technology Beijing (USTB) , China🇨🇳. ZhangLab is the laboratory of Computational Molecu">
-<meta property="og:locale" content="zh_CN">
-<meta property="article:author" content="ZhangLab">
-<meta name="twitter:card" content="summary">
-    
-    
-        
-          
-              <link rel="shortcut icon" href="https://www.ustb.edu.cn/images/favicon.ico">
-          
-        
-        
-          
-            <link rel="icon" type="image/png" href="https://www.ustb.edu.cn/images/favicon.ico" sizes="192x192">
-          
-        
-        
-          
-            <link rel="apple-touch-icon" sizes="180x180" href="https://www.ustb.edu.cn/images/favicon.ico">
-          
-        
-    
-    <!-- title -->
-    <title>ZhangLab@USTB 北京科技大学张海洋实验室</title>
-    <!-- styles -->
-    
-<link rel="stylesheet" href="/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zhang Lab - Coming Soon</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <!-- rss -->
-    
-    
-<meta name="generator" content="Hexo 5.4.1"></head>
+        body {
+            background: 
+                /* 暗色基底 */
+                radial-gradient(circle at 50% 50%, #0a0e1a 0%, #020308 100%),
+                /* 动态颜色粒子 */
+                repeating-linear-gradient(45deg, 
+                    transparent 0px, 
+                    transparent 12px,
+                    rgba(0, 90, 255, 0.05) 12px,
+                    rgba(0, 90, 255, 0.05) 24px),
+                repeating-linear-gradient(-45deg, 
+                    transparent 0px, 
+                    transparent 16px,
+                    rgba(100, 255, 218, 0.04) 16px,
+                    rgba(100, 255, 218, 0.04) 32px);
+            background-blend-mode: screen, overlay, soft-light;
+            min-height: 100vh;
+            overflow: hidden;
+            position: relative;
+            animation: bgFlow 40s linear infinite;
+            filter: contrast(120%);
+        }
 
+        /* 核心动画 */
+        @keyframes bgFlow {
+            0% { background-position: 0 0, 0 0, 0 0; }
+            100% { background-position: 100% 100%, 200px 200px, -300px -300px; }
+        }
+
+        /* 科技感噪点层 */
+        body::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.5'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.2'/%3E%3C/svg%3E");
+            pointer-events: none;
+            mix-blend-mode: overlay;
+        }
+
+        .title {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 3.5rem;
+            font-family: 'Arial', sans-serif;
+            text-shadow: 
+                0 0 15px rgba(100, 255, 218, 0.3),
+                0 0 30px rgba(0, 90, 255, 0.2);
+            opacity: 0;
+            animation: 
+                textAppear 2s cubic-bezier(0.22, 0.61, 0.36, 1) forwards,
+                textGlow 4s ease-in-out infinite;
+            z-index: 2;
+        }
+
+        @keyframes textAppear {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -45%) scale(0.95);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        @keyframes textGlow {
+            50% {
+                text-shadow: 
+                    0 0 20px rgba(100, 255, 218, 0.5),
+                    0 0 40px rgba(0, 90, 255, 0.4);
+            }
+        }
+
+        /* 动态辉光粒子 */
+        .particle {
+            position: absolute;
+            background: radial-gradient(circle, rgba(100, 255, 218, 0.3) 0%, transparent 70%);
+            filter: blur(15px);
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2.5rem;
+                padding: 0 20px;
+                text-align: center;
+            }
+            body {
+                animation-duration: 60s;
+                background-size: auto, 120px 120px, 160px 160px;
+            }
+        }
+    </style>
+</head>
 <body>
-    
-    <div class="content index width mx-auto px2 my4">
-        
-          <header id="header">
-  <a href="/">
-  
-    
-      <div id="logo" style="background-image: url(https://www.ustb.edu.cn/images/content/2017-04/20170418142450153379.png);"></div>
-    
-  
-    <div id="title">
-      <h1>ZhangLab@USTB 北京科技大学张海洋实验室</h1>
-    </div>
-  </a>
-  <div id="nav">
-    <ul>
-      <li class="icon">
-        <a href="#"><i class="fa fa-bars fa-2x"></i></a>
-      </li>
-       
-        <li><a href="/">Home</a></li>
-       
-        <li><a href="/research/">Research</a></li>
-       
-        <li><a href="/publications/">Publications</a></li>
-       
-        <li><a href="/news/">News</a></li>
-       
-        <li><a href="/members/">Members</a></li>
-       
-        <li><a href="/contact/">Contact</a></li>
-       
-        <li><a href="/joinus/">招生</a></li>
-        
-      
-    </ul>
-  </div>
-</header>
-
-        
-        <section id="about">
-  
-    <p><img src="https://raw.githubusercontent.com/zhanglabustb/WebImages/main/home.jpg" alt="" width="851" height="190" align=center/><p>&nbsp;Welcome to ZhangLab! We are at School of Chemistry and Biological Engineering, University of Science and Technology Beijing (USTB) , China🇨🇳. ZhangLab is the laboratory of <i>Computational Molecular Biology</i>, including <i>Computational Biology related to computational chemistry</i> and <i>Bioinformatics for omics data</i> . We mainly focus the applications of molecular simulation for metal ions and biomacromolecule systems (especially molecular dynamics simulation and molecular docking), computer aided drug design and omics big data mining and analysis.We welcome the corporation in computational research and bioinformatics and you can contact us.</p><p>&nbsp;&nbsp;欢迎来到张海洋实验室！我们在北京科技大学化学与生物工程学院。我们的研究方向是计算分子生物学，包括了<b>与计算化学紧密相关的计算生物学</b>和<b>组学数据处理的生物信息学</b>。目前我们主要关注分子模拟在金属离子及生物大分子体系中的应用(特别是分子动力学模拟和分子对接)、计算机辅助药物设计和组学大数据挖掘和分析。欢迎有计算、模拟、生信分析等需求的课题组与我们合作。</p></p>
-
-  
-  <p style="display: inline">
-    
-  </p>
-</section>
-
-<section id="writing">
-  <span class="h1"><a href="/posts">Writing</a></span>
-  <ul class="post-list">
-    
-      
-    
-    
-      <li class="post-item">
-        
-    <div class="meta">
-        <time datetime="2023-04-03T04:40:46.000Z" itemprop="datePublished">2023-04-03</time>
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2023/04/03/new23/">欢迎2023级硕士新同学吴冰晗、蒋焕曦加入实验室！</a>
-    
-
-
-</span>
-      </li>
-    
-      <li class="post-item">
-        
-    <div class="meta">
-        <time datetime="2022-10-08T03:40:46.000Z" itemprop="datePublished">2022-10-08</time>
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2022/10/08/zbqpaper/">周博谦同学为第一作者的论文Virtual Screening of FDA-Approved Drugs for Enhanced Binding with Mitochondrial Aldehyde Dehydrogenase被Molecules接收</a>
-    
-
-
-</span>
-      </li>
-    
-      <li class="post-item">
-        
-    <div class="meta">
-        <time datetime="2022-10-02T02:00:00.000Z" itemprop="datePublished">2022-10-02</time>
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2022/10/02/begin/">张海洋实验室官方网站（本网站）正式开始运行！欢迎大家访问与推广！</a>
-    
-
-
-</span>
-      </li>
-    
-      <li class="post-item">
-        
-    <div class="meta">
-        <time datetime="2022-09-28T04:40:46.000Z" itemprop="datePublished">2022-09-28</time>
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2022/09/28/lcy/">欢迎2023级硕士新同学卢辰一加入实验室！</a>
-    
-
-
-</span>
-      </li>
-    
-      <li class="post-item">
-        
-    <div class="meta">
-        <time datetime="2022-06-10T04:40:46.000Z" itemprop="datePublished">2022-06-10</time>
-    </div>
-
-
-        <span>
-    
-        <a class="" href="/2022/06/10/grad22/">恭喜张永广同学、邱业杰同学顺利硕士毕业！恭喜周博谦同学顺利本科毕业！毕业快乐！</a>
-    
-
-
-</span>
-      </li>
-    
-  </ul>
-  
-</section>
-
-
-
-    </div>
-    
-    <footer id="footer">
-  <div class="footer-left">
-    Copyright &copy; 2023 ZhangLab
-  </div>
-  <div class="footer-right">
-    <nav>
-      <ul>
-         
-          <li><a href="/">Home</a></li>
-         
-          <li><a href="/research/">Research</a></li>
-         
-          <li><a href="/publications/">Publications</a></li>
-         
-          <li><a href="/news/">News</a></li>
-         
-          <li><a href="/members/">Members</a></li>
-         
-          <li><a href="/contact/">Contact</a></li>
-         
-          <li><a href="/joinus/">招生</a></li>
-        
-      </ul>
-    </nav>
-  </div>
-</footer>
-
+    <h1 class="title">Zhang Lab's Website Coming Soon</h1>
 </body>
+<script>
+    // 动态粒子生成系统
+    function createParticles() {
+        const container = document.body;
+        for(let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // 随机参数
+            const size = Math.random() * 200 + 100;
+            const x = Math.random() * 100;
+            const y = Math.random() * 100;
+            const duration = Math.random() * 20 + 10;
+            
+            particle.style.cssText = `
+                width: ${size}px;
+                height: ${size}px;
+                left: ${x}%;
+                top: ${y}%;
+                animation: particleMove ${duration}s linear infinite;
+            `;
+            
+            container.appendChild(particle);
+        }
+    }
+
+    // 粒子移动动画
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes particleMove {
+            0% { transform: translate(0, 0) scale(1); opacity: 0.2; }
+            50% { transform: translate(200%, -150%) scale(0.8); opacity: 0.6; }
+            100% { transform: translate(400%, -300%) scale(0); opacity: 0; }
+        }
+    `;
+    document.head.appendChild(style);
+
+    window.addEventListener('load', createParticles);
+</script>
 </html>
-<!-- styles -->
-
-<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
-
-
-<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
-
-
-<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
-
-
-<!-- jquery -->
-
-<script src="/lib/jquery/jquery.min.js"></script>
-
-
-<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
-
-
-<script src="/js/main.js"></script>
-
-
-
-    <!-- Google Analytics -->
-    <script type="text/javascript">
-        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-        ga('create', 'UA-37473492-6', 'auto');
-        ga('send', 'pageview');
-    </script>
-
-
-
